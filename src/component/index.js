@@ -1,4 +1,12 @@
 import '../styles/bootstrap_styles.css';
+import a1 from '../assets/img/curso/a1.jpg'
+import a2 from '../assets/img/curso/a2.jpg'
+import b1 from '../assets/img/curso/b1.jpg'
+import b2 from '../assets/img/curso/b2.jpg'
+import c1 from '../assets/img/curso/c1.jpg'
+import c2 from '../assets/img/curso/c2.jpg'
+import '@natscale/react-calendar/dist/main.css';
+import { Calendar } from '@natscale/react-calendar';
 
 function Index() {
     return (
@@ -13,7 +21,7 @@ function Index() {
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="#services">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#portfolio">Cruso</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Curso</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">Calendario</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contacto con nosotros</a></li>
                     </ul>
@@ -25,7 +33,7 @@ function Index() {
             <div class="container">
                 <div class="masthead-subheading">Bienvenidos a Kimchilingua!</div>
                 <div class="masthead-heading text-uppercase">Mucho gusto!</div>
-                <a class="btn btn-danger btn-xl text-uppercase" href="#services">Dime más</a>
+                <a class="btn btn-xl text-uppercase" style={{color:'#fff',backgroundColor:'#2e3383',border:'#2e3383'}} href="#services">Dime más</a>
             </div>
         </header>
         
@@ -33,7 +41,7 @@ function Index() {
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Inicio</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">Presentar el inicio</h3>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
@@ -41,24 +49,50 @@ function Index() {
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">E-Commerce</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <h4 class="my-3">Quién es Kimchilingua</h4>
+                        <p class="text-muted">Soy una persona que aprendí español y de Corea. Puedo hablar suficiente en español</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Responsive Design</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <h4 class="my-3">Cuándo se puede hacer la clase</h4>
+                        <p class="text-muted">Entre las 7 y las 12 de la mañana.</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Web Security</h4>
-                        <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+                        <h4 class="my-3">Dónde podemos quedar</h4>
+                        <p class="text-muted">Por Zoom</p>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Qué se aprende</h4>
+                        <p class="text-muted">De la cultura coreana, canción, serie y etc.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Cómo se enseña</h4>
+                        <p class="text-muted">La gramática y pronunción.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="my-3">Por qué Kimchilingua</h4>
+                        <p class="text-muted">Si empiezas a la clase, no te arrepentirías.</p>
                     </div>
                 </div>
             </div>
@@ -67,8 +101,8 @@ function Index() {
         <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Cruso</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h2 class="section-heading text-uppercase">Curso</h2>
+                    <h3 class="section-subheading text-muted">Presentar el curso</h3>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 mb-4">
@@ -78,11 +112,11 @@ function Index() {
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/1.jpg" alt="..." />
+                                <img class="img-fluid" src={a1} alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Threads</div>
-                                <div class="portfolio-caption-subheading text-muted">Illustration</div>
+                                <div class="portfolio-caption-heading">A1</div>
+                                <div class="portfolio-caption-subheading text-muted">Comprender y utilizar expresiones cotidianas de uso muy frecuente en cualquier lugar del mundo hispanohablante para satisfacer necesidades inmediatas.</div>
                             </div>
                         </div>
                     </div>
@@ -93,11 +127,11 @@ function Index() {
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
+                                <img class="img-fluid" src={a2} alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Explore</div>
-                                <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
+                                <div class="portfolio-caption-heading">A2</div>
+                                <div class="portfolio-caption-subheading text-muted">Comprender y utilizar expresiones cotidianas de uso frecuente, relacionadas casi siempre con áreas de experiencia que le sean especialmente relevantes por su inmediatez (información básica sobre sí mismo y sobre su familia, compras y lugares de interés, ocupaciones, etc.).</div>
                             </div>
                         </div>
                     </div>
@@ -108,11 +142,11 @@ function Index() {
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/3.jpg" alt="..." />
+                                <img class="img-fluid" src={b1} alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Finish</div>
-                                <div class="portfolio-caption-subheading text-muted">Identity</div>
+                                <div class="portfolio-caption-heading">B1</div>
+                                <div class="portfolio-caption-subheading text-muted">Comprender los puntos principales de textos orales y escritos en variedades normalizadas de la lengua y que no sean excesivamente localizadas, siempre que versen sobre asuntos conocidos, ya sean estos relacionados con el trabajo, el estudio o la vida cotidiana.</div>
                             </div>
                         </div>
                     </div>
@@ -123,11 +157,11 @@ function Index() {
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/4.jpg" alt="..." />
+                                <img class="img-fluid" src={b2} alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Lines</div>
-                                <div class="portfolio-caption-subheading text-muted">Branding</div>
+                                <div class="portfolio-caption-heading">B2</div>
+                                <div class="portfolio-caption-subheading text-muted">Comprender lo esencial de textos orales y escritos complejos, incluso aunque traten sobre temas abstractos, se presenten en diversas variedades del español o tengan un carácter técnico, principalmente si tratan sobre áreas de conocimiento especializado a las que se ha tenido acceso.</div>
                             </div>
                         </div>
                     </div>
@@ -138,11 +172,11 @@ function Index() {
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
+                                <img class="img-fluid" src={c1} alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Southwest</div>
-                                <div class="portfolio-caption-subheading text-muted">Website Design</div>
+                                <div class="portfolio-caption-heading">C1</div>
+                                <div class="portfolio-caption-subheading text-muted">Desenvolverse con soltura al procesar una amplia variedad de textos orales y escritos de cierta extensión en cualquier variante de la lengua, reconociendo incluso en ellos sentidos implícitos, actitudes o intenciones.</div>
                             </div>
                         </div>
                     </div>
@@ -153,14 +187,17 @@ function Index() {
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
+                                <img class="img-fluid" src={c2} alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Window</div>
-                                <div class="portfolio-caption-subheading text-muted">Photography</div>
+                                <div class="portfolio-caption-heading">C2</div>
+                                <div class="portfolio-caption-subheading text-muted">Desenvolverse en cualquier situación en la que se requiera comprender prácticamente todo lo que se oye o se lee, independientemente de la extensión de los textos, de su complejidad o grado de abstracción, del grado de familiarización con los temas que tratan, de la variedad de la lengua que empleen o de la necesidad de realizar inferencias u otras operaciones para conocer su contenido.</div>
                             </div>
                         </div>
                     </div>
+                </div>
+                <div style={{display: 'flex', justifyContent:'center', marginTop: '50px'}}>
+                    <a class="btn btn-xl text-uppercase" style={{color:'#fff',backgroundColor:'#2e3383',border:'#2e3383'}} href="#services">+Info</a>
                 </div>
             </div>
         </section>
@@ -169,60 +206,12 @@ function Index() {
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Calendario</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">Presentar el calendario</h3>
                 </div>
-                <ul class="timeline">
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/1.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>2009-2011</h4>
-                                <h4 class="subheading">Our Humble Beginnings</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/2.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>March 2011</h4>
-                                <h4 class="subheading">An Agency is Born</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/3.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>December 2015</h4>
-                                <h4 class="subheading">Transition to Full Service</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="assets/img/about/4.jpg" alt="..." /></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4>July 2020</h4>
-                                <h4 class="subheading">Phase Two Expansion</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image">
-                            <h4>
-                                Be Part
-                                <br />
-                                Of Our
-                                <br />
-                                Story!
-                            </h4>
-                        </div>
-                    </li>
+                <ul class="timeline" style={{display: 'flex',justifyContent: 'space-around'}}>
+                    <Calendar />
+                    <Calendar />
+                    <Calendar />
                 </ul>
             </div>
         </section>
