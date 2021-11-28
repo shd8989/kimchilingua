@@ -5,7 +5,14 @@ import b2 from '../../assets/img/curso/b2.jpg'
 import c1 from '../../assets/img/curso/c1.jpg'
 import c2 from '../../assets/img/curso/c2.jpg'
 
+import { useState } from "react";
+import Modal from './modal';
+
 function Curso() {
+    const [isShowing, setIsShowing] = useState(false);
+    const openModal = () => {
+        setIsShowing(true);
+    };
     return (
         <>
         <section class="page-section bg-light" id="portfolio">
@@ -14,6 +21,8 @@ function Curso() {
                     <h2 class="section-heading text-uppercase">Cursos</h2>
                     <h3 class="section-subheading text-muted">COREANO</h3>
                     <div style={{display: 'flex', justifyContent:'center', marginTop: '50px'}}>
+                        <button onClick={openModal}>open modal</button>
+                        <div>{isShowing && <Modal message="This is Modal" />}</div>
                         <a class="btn btn-xl text-uppercase" style={{color:'#fff',backgroundColor:'#2e3383',border:'#2e3383'}} href="#services">Programa de estudio</a>
                     </div>
                 </div>
