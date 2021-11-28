@@ -4,8 +4,8 @@ function Inicio() {
         <section class="page-section" id="services">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Inicio</h2>
-                    <h3 class="section-subheading text-muted">Presentar el inicio</h3>
+                    <h2 class="section-heading text-uppercase">NUESTRO SERVICIO DE CLASES EN LÍNEA</h2>
+                    <h3 class="section-subheading text-muted">¿Por qué Kimchilingua?</h3>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
@@ -13,24 +13,24 @@ function Inicio() {
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Quién es Kimchilingua</h4>
-                        <p class="text-muted">Soy una persona que aprendí español y de Corea. Puedo hablar suficiente en español</p>
+                        <h4 class="my-3">Profesora nativa</h4>
+                        <p class="text-muted">Es muy difícil corregir un mal hábito lingüístico después de tenerlo. Aprende el coreano más correcto con un hablante nativo desde el principio.</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Cuándo se puede hacer la clase</h4>
-                        <p class="text-muted">Entre las 7 y las 12 de la mañana.</p>
+                        <h4 class="my-3">Profesora certificada</h4>
+                        <p class="text-muted">Saber usar bien el idioma y enseñarlo bien son dos cosas diferentes. Estudiar coreano con una profesora con el certificado de enseñanza  de coreano para extranjeros es el atajo para conquistar el idioma.</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Dónde podemos quedar</h4>
-                        <p class="text-muted">Por Zoom</p>
+                        <h4 class="my-3">Profesora políglota</h4>
+                        <p class="text-muted">Yo tengo dominio de coreano(nativo), español(superior), inglés(superior) y portugués(intermedio).  No intentes memorizar el idioma sin entender. Solucionaré todas tus dudas.</p>
                     </div>
                 </div>
                 <div class="row text-center">
@@ -39,24 +39,57 @@ function Inicio() {
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Qué se aprende</h4>
-                        <p class="text-muted">De la cultura coreana, canción, serie y etc.</p>
+                        <h4 class="my-3">Clase TOPIK</h4>
+                        <p class="text-muted">Si deseas estudiar o vivir en Corea, se requiere el certificado TOPIK, el examen oficial de idioma coreano. Tengo un certificado de TOPIK nivel 6 y ya tengo todos los materiales para el examen. ¡No sufras solo! Estudiemos juntos.</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Cómo se enseña</h4>
-                        <p class="text-muted">La gramática y pronunción.</p>
+                        <h4 class="my-3">8 años de experiencia</h4>
+                        <p class="text-muted">He trabajado como profesora de español y coreano durante 8 años. Enseñar es mi pasión y misión y si me permite la vida, quisiera ser profesora por el resto de mi vida. Mi carrera es la prueba de cuánto amor y pasión tengo por este trabajo, no solo de habilidad.</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
                             <i class="fas fa-circle fa-stack-2x text-primary"></i>
                             <i class="fas fa-lock fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h4 class="my-3">Por qué Kimchilingua</h4>
-                        <p class="text-muted">Si empiezas a la clase, no te arrepentirías.</p>
+                        <h4 class="my-3">Clase a tu gusto</h4>
+                        <p class="text-muted">La mejor forma de aprender una lengua es vivir la cultura. En mis clases se aprende el idioma a través de la música, videos y diversión. Vamos a estudiar el coreano de una forma fácil y divertida.</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Información General</h2>
+                    <div class="row">
+                        <div class="col-md-4"><h5 class="my-3">Inscripciones abiertas</h5></div>
+                        <div class="col-md-8" style={{margin: '1rem 0'}}><div>Inscríbete de en <a href="https://www.kimchilingua.com">www.kimchilingua.com</a> *CUPO LIMITADO*</div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"><h5 class="my-3">Número de clases por nivel</h5></div>
+                        <div class="col-md-8" style={{margin: '1rem 0', textAlign: 'left'}}>
+                            <div>12 clases de 2 horas c/u. 24 horas totales del curso</div>
+                            <div>(TOPIKⅠ: 8 clases de 8 horas c/u. 16 horas totales del curso)</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"><h5 class="my-3">Costo</h5></div>
+                        <div class="col-md-8" style={{margin: '1rem 0', textAlign: 'left'}}>
+                            <div>₩120,000 KRW equivalentes a $100 USD para el nivel básico y TOPIKⅠ</div>
+                            <div>₩130,000 KRW equivalentes a $110 USD nivel intermedio</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"><h5 class="my-3">Método de pago</h5></div>
+                        <div class="col-md-8" style={{margin: '1rem 0', textAlign: 'left'}}>
+                            <div>Paypal (elena.h.lee@gmail,com)</div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"><h5 class="my-3">Disponibles para</h5></div>
+                        <div class="col-md-8" style={{margin: '1rem 0', textAlign: 'left'}}>
+                            <div>Gente de 10años en adelante</div>
+                        </div>
                     </div>
                 </div>
             </div>

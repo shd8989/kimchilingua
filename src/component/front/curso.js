@@ -10,9 +10,12 @@ function Curso() {
         <>
         <section class="page-section bg-light" id="portfolio">
             <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Curso</h2>
-                    <h3 class="section-subheading text-muted">Presentar el curso</h3>
+                <div class="text-center" style={{marginBottom: 50}}>
+                    <h2 class="section-heading text-uppercase">Cursos</h2>
+                    <h3 class="section-subheading text-muted">COREANO</h3>
+                    <div style={{display: 'flex', justifyContent:'center', marginTop: '50px'}}>
+                        <a class="btn btn-xl text-uppercase" style={{color:'#fff',backgroundColor:'#2e3383',border:'#2e3383'}} href="#services">Programa de estudio</a>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 mb-4">
@@ -25,8 +28,14 @@ function Curso() {
                                 <img class="img-fluid" src={a1} alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">A1</div>
-                                <div class="portfolio-caption-subheading text-muted">Comprender y utilizar expresiones cotidianas de uso muy frecuente en cualquier lugar del mundo hispanohablante para satisfacer necesidades inmediatas.</div>
+                                <div class="portfolio-caption-heading">Introductorio</div>
+                                <div class="portfolio-caption-subheading text-muted" style={{textAlign: 'left'}}>
+                                    <p>Lun-Jue, 6:00-8:00PM(GMT-3)</p>
+                                    <p>Inicia: 3 de Enero 2022</p>
+                                    <p>Duración: 3 semanas</p>
+                                    <p>Horas: 24 horas</p>
+                                    <p>Clases: 12 sesiones</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -40,8 +49,14 @@ function Curso() {
                                 <img class="img-fluid" src={a2} alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">A2</div>
-                                <div class="portfolio-caption-subheading text-muted">Comprender y utilizar expresiones cotidianas de uso frecuente, relacionadas casi siempre con áreas de experiencia que le sean especialmente relevantes por su inmediatez (información básica sobre sí mismo y sobre su familia, compras y lugares de interés, ocupaciones, etc.).</div>
+                                <div class="portfolio-caption-heading">Básico 1</div>
+                                <div class="portfolio-caption-subheading text-muted" style={{textAlign: 'left'}}>
+                                    <p>Lun/Mié, 8:00-10:00PM(GMT-3)</p>
+                                    <p>Inicia: 3 de Enero 2022</p>
+                                    <p>Duración: Un mes y medio</p>
+                                    <p>Horas: 24 horas</p>
+                                    <p>Clases: 12 sesiones</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -55,8 +70,14 @@ function Curso() {
                                 <img class="img-fluid" src={b1} alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">B1</div>
-                                <div class="portfolio-caption-subheading text-muted">Comprender los puntos principales de textos orales y escritos en variedades normalizadas de la lengua y que no sean excesivamente localizadas, siempre que versen sobre asuntos conocidos, ya sean estos relacionados con el trabajo, el estudio o la vida cotidiana.</div>
+                                <div class="portfolio-caption-heading">Básico 3</div>
+                                <div class="portfolio-caption-subheading text-muted" style={{textAlign: 'left'}}>
+                                    <p>Mar/Jue, 10:00-11:30PM(GMT-3)</p>
+                                    <p>Inicia: 4 de Enero 2022</p>
+                                    <p>Duración: Bimestre</p>
+                                    <p>Horas: 24 horas</p>
+                                    <p>Clases: 16 sesiones</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -70,8 +91,14 @@ function Curso() {
                                 <img class="img-fluid" src={b2} alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">B2</div>
-                                <div class="portfolio-caption-subheading text-muted">Comprender lo esencial de textos orales y escritos complejos, incluso aunque traten sobre temas abstractos, se presenten en diversas variedades del español o tengan un carácter técnico, principalmente si tratan sobre áreas de conocimiento especializado a las que se ha tenido acceso.</div>
+                            <div class="portfolio-caption-heading">TOPIK 1</div>
+                                <div class="portfolio-caption-subheading text-muted" style={{textAlign: 'left'}}>
+                                    <p>Lun/Mié, 10:00-12:00PM(GMT-3)</p>
+                                    <p>Inicia: 3 de Enero 2022</p>
+                                    <p>Duración: Un mes</p>
+                                    <p>Horas: 16 horas</p>
+                                    <p>Clases: 8 sesiones</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -85,8 +112,14 @@ function Curso() {
                                 <img class="img-fluid" src={c1} alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">C1</div>
-                                <div class="portfolio-caption-subheading text-muted">Desenvolverse con soltura al procesar una amplia variedad de textos orales y escritos de cierta extensión en cualquier variante de la lengua, reconociendo incluso en ellos sentidos implícitos, actitudes o intenciones.</div>
+                            <div class="portfolio-caption-heading">Intermedio 1</div>
+                                <div class="portfolio-caption-subheading text-muted" style={{textAlign: 'left'}}>
+                                    <p>Mar/Jue, 8:00-10:00PM(GMT-3)</p>
+                                    <p>Inicia: 4 de Enero 2022</p>
+                                    <p>Duración: Un mes y medio</p>
+                                    <p>Horas: 24 horas</p>
+                                    <p>Clases: 12 sesiones</p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -100,8 +133,14 @@ function Curso() {
                                 <img class="img-fluid" src={c2} alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">C2</div>
-                                <div class="portfolio-caption-subheading text-muted">Desenvolverse en cualquier situación en la que se requiera comprender prácticamente todo lo que se oye o se lee, independientemente de la extensión de los textos, de su complejidad o grado de abstracción, del grado de familiarización con los temas que tratan, de la variedad de la lengua que empleen o de la necesidad de realizar inferencias u otras operaciones para conocer su contenido.</div>
+                            <div class="portfolio-caption-heading">NIVEL BÁSICO</div>
+                                <div class="portfolio-caption-subheading text-muted" style={{textAlign: 'left'}}>
+                                    <p>Lun/Mié, 8:00-10:00PM(GMT-3)</p>
+                                    <p>Inicia: 3 de Enero 2022</p>
+                                    <p>Duración: Un mes y medio</p>
+                                    <p>Horas: 24 horas</p>
+                                    <p>Clases: 12 sesiones</p>
+                                </div>
                             </div>
                         </div>
                     </div>
