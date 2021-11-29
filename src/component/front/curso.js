@@ -8,11 +8,77 @@ import c2 from '../../assets/img/curso/c2.jpg'
 import { useState } from "react";
 import Modal from './modal';
 
+const message = "NIVEL INTRODUCTORIO \
+\
+Bimestre 1: 『EPS TOPIK』 1-7 \
+Este nivel está dirigido para las personas que estudian coreano por primera vez. Se inician en el conocimiento del alfabeto coreano Hangul(한글), las sílabas y la estructura de frase, saludos, agradecimiento y auto-presentación.  \
+\
+NIVEL BÁSICO \
+\
+Bimestre 1: 『EPS TOPIK』  8-12 \
+En este nivel se estudia la gramática y el vocabulario más básico guiado a las expresiones cotidianas y aprenderán las herramientas para poner comprender la lengua oral y escrita de forma más sencilla. \
+Aprenderán numerales: Fecha, la hora y contéo. \
+\
+Bimestre 2: 『EPS TOPIK』  13-17 \
+En este nivel aprenderán expresiones más practicas: hacer citas, pedir comida en restaurantes, espresiones relacionadas con el clima, pasatiempos y viajes. \
+\
+Bimestre 3: 『EPS TOPIK』  18-21 \
+\
+En este nivel aprenderán cómo usar transportes públicos, típicas llamadas telefónicas, compras por Internet, expresiones al colaborar con los compañeros y de invitaciones.  \
+\
+Bimestre 4: 『EPS TOPIK』 22-26\
+\
+En este nivel aprenderán cómo hablar de prohibiciones, modales y etiquetas de Corea, honoríficos, estudios y el cuerpo humano. \
+\
+Bimestre 5: 『EPS TOPIK』  27-30\
+En este nivel aprenderán conversaciones en lugares como hospitales y oficinas gubernamentales. \
+\
+NIVEL INTERMEDIO \
+\
+Bimestre 1: 『Seogang』 3A 1-8\
+El contenido varia depende de los estudiantes\
+Bimestre 2: 『Seogang』  3B 1-4\
+El contenido varia depende de los estudiantes\
+\
+\
+Bimestre 3: 『Seogang』  3B 5-8\
+El contenido varia depende de los estudiantes\
+\
+Bimestre 4: 『Seogang』  4A 1-4\
+El contenido varia depende de los estudiantes\
+\
+Bimestre 5: 『Seogang』  4A 5-8\
+El contenido varia depende de los estudiantes\
+\
+NIVEL AVANZADO  \
+\
+Bimestre 1: 『Seogang』  4B 1-4\
+El contenido varia depende de los estudiantes\
+\
+Bimestre 2: 『Seogang』  4B 5-8\
+El contenido varia depende de los estudiantes\
+\
+Bimestre 3: 『Seogang』  5A 1-4\
+El contenido varia depende de los estudiantes\
+\
+Bimestre 4: 『Seogang』  5A 5-8\
+El contenido varia depende de los estudiantes\
+\
+Bimestre 5: 『Seogang』  5B 1-4\
+El contenido varia depende de los estudiantes\
+\
+Bimestre 6: 『Seogang』  5B 5-8\
+El contenido varia depende de los estudiantes\
+";
+
 function Curso() {
-    const [isShowing, setIsShowing] = useState(false);
+    const [modalVisible, setModalVisible] = useState(false)
     const openModal = () => {
-        setIsShowing(true);
-    };
+        setModalVisible(true)
+    }
+    const closeModal = () => {
+        setModalVisible(false)
+    }
     return (
         <>
         <section class="page-section bg-light" id="portfolio">
@@ -21,9 +87,14 @@ function Curso() {
                     <h2 class="section-heading text-uppercase">Cursos</h2>
                     <h3 class="section-subheading text-muted">COREANO</h3>
                     <div style={{display: 'flex', justifyContent:'center', marginTop: '50px'}}>
-                        <button onClick={openModal}>open modal</button>
-                        <div>{isShowing && <Modal message="This is Modal" />}</div>
-                        <a class="btn btn-xl text-uppercase" style={{color:'#fff',backgroundColor:'#2e3383',border:'#2e3383'}} href="#services">Programa de estudio</a>
+                        <button class="btn btn-xl text-uppercase" style={{color:'#fff',backgroundColor:'#2e3383',border:'#2e3383'}} onClick={openModal}>Programa de estudio</button>
+                        {
+                            modalVisible && <Modal
+                            visible={modalVisible}
+                            closable={true}
+                            maskClosable={true}
+                            onClose={closeModal}>{message}</Modal>
+                        }
                     </div>
                 </div>
                 <div class="row">
