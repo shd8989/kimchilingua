@@ -13,6 +13,7 @@ function Top() {
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Curso</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">Calendario</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contacto con nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/admin">Admin</a></li>
                     </ul>
                 </div>
             </div>
