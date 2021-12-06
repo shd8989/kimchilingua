@@ -85,7 +85,6 @@ function Curso() {
             <div class="container">
                 <div class="text-center" style={{marginBottom: 50}}>
                     <h2 class="section-heading text-uppercase">Cursos</h2>
-                    <h3 class="section-subheading text-muted">COREANO</h3>
                     <div style={{display: 'flex', justifyContent:'center', marginTop: '50px'}}>
                         <button class="btn btn-xl text-uppercase" style={{color:'#fff',backgroundColor:'#2e3383',border:'#2e3383'}} onClick={openModal}>Programa de estudio</button>
                         {
