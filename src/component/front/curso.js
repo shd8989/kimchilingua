@@ -1,9 +1,9 @@
-import a1 from '../../assets/img/curso/a1.jpg'
-import a2 from '../../assets/img/curso/a2.jpg'
-import b1 from '../../assets/img/curso/b1.jpg'
-import b2 from '../../assets/img/curso/b2.jpg'
-import c1 from '../../assets/img/curso/c1.jpg'
-import c2 from '../../assets/img/curso/c2.jpg'
+import basico1 from '../../assets/img/curso/Básico1.jpg'
+import basico2 from '../../assets/img/curso/Básico-2.jpg'
+import basico3 from '../../assets/img/curso/Básico-3.jpg'
+import intermedio from '../../assets/img/curso/Intermedio.jpg'
+import introductorio from '../../assets/img/curso/Introductorio-1.jpg'
+import topik from '../../assets/img/curso/Topik-1.jpg'
 
 import { useState } from "react";
 import Modal from './modal';
@@ -104,7 +104,7 @@ function Curso() {
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src={a1} alt="..." />
+                                <img class="img-fluid" src={introductorio} alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Introductorio</div>
@@ -125,7 +125,7 @@ function Curso() {
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src={a2} alt="..." />
+                                <img class="img-fluid" src={basico1} alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Básico 1</div>
@@ -146,7 +146,7 @@ function Curso() {
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src={b1} alt="..." />
+                                <img class="img-fluid" src={basico3} alt="..." />
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Básico 3</div>
@@ -167,7 +167,7 @@ function Curso() {
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src={b2} alt="..." />
+                                <img class="img-fluid" src={topik} alt="..." />
                             </a>
                             <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">TOPIK 1</div>
@@ -188,7 +188,7 @@ function Curso() {
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src={c1} alt="..." />
+                                <img class="img-fluid" src={intermedio} alt="..." />
                             </a>
                             <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Intermedio 1</div>
@@ -209,7 +209,7 @@ function Curso() {
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src={c2} alt="..." />
+                                <img class="img-fluid" src={basico2} alt="..." />
                             </a>
                             <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">NIVEL BÁSICO</div>
