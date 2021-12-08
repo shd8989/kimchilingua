@@ -112,7 +112,7 @@ function Curso() {
                                     <p>Lun-Jue, 6:00-8:00PM(GMT-3)</p>
                                     <p>Inicia: 3 de Enero 2022</p>
                                     <p>Duración: 3 semanas</p>
-                                    <p>Horas: 24 horas</p>
+                                    <p>Horas totales: 24 horas</p>
                                     <p>Clases: 12 sesiones</p>
                                 </div>
                             </div>
@@ -133,7 +133,7 @@ function Curso() {
                                     <p>Lun/Mié, 8:00-10:00PM(GMT-3)</p>
                                     <p>Inicia: 3 de Enero 2022</p>
                                     <p>Duración: Un mes y medio</p>
-                                    <p>Horas: 24 horas</p>
+                                    <p>Horas totales: 24 horas</p>
                                     <p>Clases: 12 sesiones</p>
                                 </div>
                             </div>
@@ -154,7 +154,7 @@ function Curso() {
                                     <p>Mar/Jue, 10:00-11:30PM(GMT-3)</p>
                                     <p>Inicia: 4 de Enero 2022</p>
                                     <p>Duración: Bimestre</p>
-                                    <p>Horas: 24 horas</p>
+                                    <p>Horas totales: 24 horas</p>
                                     <p>Clases: 16 sesiones</p>
                                 </div>
                             </div>
@@ -175,7 +175,7 @@ function Curso() {
                                     <p>Lun/Mié, 10:00-12:00PM(GMT-3)</p>
                                     <p>Inicia: 3 de Enero 2022</p>
                                     <p>Duración: Un mes</p>
-                                    <p>Horas: 16 horas</p>
+                                    <p>Horas totales: 16 horas</p>
                                     <p>Clases: 8 sesiones</p>
                                 </div>
                             </div>
@@ -196,36 +196,15 @@ function Curso() {
                                     <p>Mar/Jue, 8:00-10:00PM(GMT-3)</p>
                                     <p>Inicia: 4 de Enero 2022</p>
                                     <p>Duración: Un mes y medio</p>
-                                    <p>Horas: 24 horas</p>
-                                    <p>Clases: 12 sesiones</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        
-                        <div class="portfolio-item">
-                            <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                                <div class="portfolio-hover">
-                                    <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-                                </div>
-                                <img class="img-fluid" src={basico2} alt="..." />
-                            </a>
-                            <div class="portfolio-caption">
-                            <div class="portfolio-caption-heading">NIVEL BÁSICO</div>
-                                <div class="portfolio-caption-subheading text-muted" style={{textAlign: 'left'}}>
-                                    <p>Lun/Mié, 8:00-10:00PM(GMT-3)</p>
-                                    <p>Inicia: 3 de Enero 2022</p>
-                                    <p>Duración: Un mes y medio</p>
-                                    <p>Horas: 24 horas</p>
+                                    <p>Horas totales: 24 horas</p>
                                     <p>Clases: 12 sesiones</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div style={{display: 'flex', justifyContent:'center', marginTop: '50px'}}>
-                    <a class="btn btn-xl text-uppercase" style={{color:'#fff',backgroundColor:'#2e3383',border:'#2e3383'}} href="#services">+Info</a>
+                <div class="row" style={{marginTop:'1rem'}}>
+                    <div class="col-md-12"><h5 class="my-3">* Consultar en el caso de necesitar clases de TOPIK Ⅱ y clases presenciales</h5></div>
                 </div>
             </div>
         </section>

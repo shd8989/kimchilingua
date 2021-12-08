@@ -47,7 +47,7 @@ function Inicio() {
                             <i class="fas fa-laptop fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">8 años de experiencia</h4>
-                        <p class="text-muted">He trabajado como profesora de español y coreano durante 8 años. Enseñar es mi pasión y misión y si me permite la vida, quisiera ser profesora por el resto de mi vida. Mi carrera es la prueba de cuánto amor y pasión tengo por este trabajo, no solo de habilidad.</p>
+                        <p class="text-muted">He trabajado como profesora de español y coreano durante 8 años. Enseñar es mi pasión y misión y si me lo permite la vida, quisiera ser profesora por el resto de mi vida. Mi carrera es la prueba de cuánto amor y pasión tengo por este trabajo, no solo de mi habilidad.</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
@@ -58,11 +58,17 @@ function Inicio() {
                         <p class="text-muted">La mejor forma de aprender una lengua es vivir la cultura. En mis clases se aprende el idioma a través de la música, videos y diversión. Vamos a estudiar el coreano de una forma fácil y divertida.</p>
                     </div>
                 </div>
-                <div class="text-center">
+                <div class="text-center" style={{marginTop: '5rem'}}>
                     <h2 class="section-heading text-uppercase">Información General</h2>
                     <div class="row">
                         <div class="col-md-4"><h5 class="my-3">Inscripciones abiertas</h5></div>
-                        <div class="col-md-8" style={{margin: '1rem 0'}}><div>Inscríbete de en <a href="https://www.kimchilingua.com">www.kimchilingua.com</a> *CUPO LIMITADO*</div></div>
+                        <div class="col-md-8" style={{margin: '1rem 0', textAlign: 'left'}}><div>Inscríbete en <a href="https://www.kimchilingua.com">www.kimchilingua.com</a> *CUPO LIMITADO*</div></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"><h5 class="my-3">Duración del curso</h5></div>
+                        <div class="col-md-8" style={{margin: '1rem 0', textAlign: 'left'}}>
+                            <div>Un mes y medio a partir de la primera clase (TOPIKⅠ: un mes)</div>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4"><h5 class="my-3">Número de clases por nivel</h5></div>
@@ -87,7 +93,7 @@ function Inicio() {
                     <div class="row">
                         <div class="col-md-4"><h5 class="my-3">Disponibles para</h5></div>
                         <div class="col-md-8" style={{margin: '1rem 0', textAlign: 'left'}}>
-                            <div>Gente de 10años en adelante</div>
+                            <div>personas de 10 años en adelante</div>
                         </div>
                     </div>
                 </div>
