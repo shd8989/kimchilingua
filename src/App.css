@@ -13,6 +13,21 @@
   }
 }
 
+@font-face {
+  font-family: "enjoy_bold";
+  src: url("./assets/font/tvN_Enjoystories_Bold.ttf");
+}
+
+@font-face {
+  font-family: "enjoy_light";
+  src: url("./assets/font/tvN_Enjoystories_Light.ttf");
+}
+
+@font-face {
+  font-family: "enjoy_medium";
+  src: url("./assets/font/tvN_Enjoystories_Medium.ttf");
+}
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
