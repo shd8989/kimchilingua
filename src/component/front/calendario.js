@@ -1,4 +1,6 @@
-import { Calendar } from '@natscale/react-calendar';
+import Calender from './calender/calender';
+import { ThemeProvider } from 'styled-components';
+import Theme from '../../assets/styles/theme';
 
 // https://www.npmjs.com/package/react-calendar
 
@@ -10,10 +12,10 @@ function Calendario() {
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Calendario</h2>
                 </div>
-                <ul class="timeline" style={{display: 'flex',justifyContent: 'space-around'}}>
-                    <Calendar />
-                    <Calendar />
-                    <Calendar />
+                <ul style={{display: 'flex',justifyContent: 'space-around', position: 'relative', listStyle: 'none'}}>
+                    <ThemeProvider theme={Theme}>
+                        <Calender />
+                    </ThemeProvider>
                 </ul>
                 
                 <div style={{display: 'flex', justifyContent:'center', marginTop: '50px'}}>
