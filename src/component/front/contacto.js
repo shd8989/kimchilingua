@@ -1,3 +1,5 @@
+import ReactWhatsapp from 'react-whatsapp';
+
 function Contacto() {
     return (
         <>
@@ -9,24 +11,7 @@ function Contacto() {
                 
                 <form id="contactForm" data-sb-form-api-token="API_TOKEN">
                     <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                
-                                <input class="form-control" id="name" type="text" placeholder="Tu nombre (Requerido)" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
-                            </div>
-                            <div class="form-group">
-                                
-                                <input class="form-control" id="email" type="email" placeholder="Tu correo (Requerido)" data-sb-validations="required,email" />
-                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <div class="form-group mb-md-0">
-                                
-                                <input class="form-control" id="phone" type="tel" placeholder="Tu número de teléfono" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                            </div>
-                        </div>
+                        <div class="col-md-3"></div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
                                 
@@ -34,6 +19,7 @@ function Contacto() {
                                 <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                             </div>
                         </div>
+                        <div class="col-md-3"></div>
                     </div>
                     
                     <div class="d-none" id="submitSuccessMessage">
@@ -47,7 +33,9 @@ function Contacto() {
                     
                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                     
-                    <div class="text-center"><button class="btn btn-primary btn-xl text-uppercase disabled" id="submitButton" type="submit">Enviar</button></div>
+                    <div class="text-center">
+                        <ReactWhatsapp class="btn btn-primary btn-xl text-uppercase" number="82-10-1111-1111" message="La cuenta de Kimchilingua de Whatsapp">Enviar</ReactWhatsapp>
+                        </div>
                 </form>
             </div>
         </section>
