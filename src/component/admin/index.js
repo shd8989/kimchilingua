@@ -1,38 +1,53 @@
+import { useCallback, useEffect, useState } from 'react';
+import { db } from "../common/firebase";
+
 function Index() {
+    const [tasks, setTasks] = useState([]);
+
+    const fetchData = useCallback(() => {
+        // 받아온 데이터를 저장할 배열
+        let tasksData = [];
+    
+        // firestore.js에서 가져온 firestore 객체
+        db
+            .collection("admin") //  "tasks" 컬렉션 반환
+            .get() // "tasks" 컬렉션의 모든 다큐먼트를 갖는 프로미스 반환
+            .then((docs) => {
+            // forEach 함수로 각각의 다큐먼트에 함수 실행
+            docs.forEach((doc) => {
+                // data(), id로 다큐먼트 필드, id 조회
+                tasksData.push({ todo: doc.data().todo, id: doc.id });
+            });
+            // tasks state에 받아온 데이터 추가
+            setTasks((prevTasks) => prevTasks.concat(tasksData));
+        });
+    }, []);
+    
+    // 최초 렌더링 이후에 실행하기 위해 useEffect 내부에서 함수 실행
+    useEffect(() => {
+        fetchData();
+    }, [fetchData]);
+
     return (
         <>
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Admin</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
                 </div>
                 
                 <form id="contactForm" data-sb-form-api-token="API_TOKEN">
                     <div class="row align-items-stretch mb-5">
+                        <div class="col-md-3"></div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                
-                                <input class="form-control" id="name" type="text" placeholder="Your Name *" data-sb-validations="required" />
+                                <input class="form-control" id="name" type="text" placeholder="아이디" data-sb-validations="required" />
                                 <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
                             <div class="form-group">
-                                
-                                <input class="form-control" id="email" type="email" placeholder="Your Email *" data-sb-validations="required,email" />
+                                <input class="form-control" id="email" type="email" placeholder="비밀번호" data-sb-validations="required,email" />
                                 <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
                                 <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
-                            </div>
-                            <div class="form-group mb-md-0">
-                                
-                                <input class="form-control" id="phone" type="tel" placeholder="Your Phone *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group form-group-textarea mb-md-0">
-                                
-                                <textarea class="form-control" id="message" placeholder="Your Message *" data-sb-validations="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                             </div>
                         </div>
                     </div>
