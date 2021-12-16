@@ -3,6 +3,7 @@ import basico3 from '../../assets/img/curso/Básico-3.jpg'
 import intermedio from '../../assets/img/curso/Intermedio.jpg'
 import introductorio from '../../assets/img/curso/Introductorio-1.jpg'
 import topik from '../../assets/img/curso/Topik-1.jpg'
+import {v4 as uuidv4} from 'uuid';
 
 import { useState } from "react";
 import Modal from './modal';
@@ -16,8 +17,8 @@ const message = [
     },
     {
         "nivel":"NIVEL BÁSICO",
-        "title":[{"1":"Bimestre 1", "2":"Bimestre 2", "3":"Bimestre 3", "4":"Bimestre 4", "5":"Bimestre 5"}],
-        "subtitle":[{"1":"『EPS TOPIK』  8-12", "2":"『EPS TOPIK』  13-17"}, {"3":"『EPS TOPIK』  18-21"}, {"4":"『EPS TOPIK』  22-26"}, {"5":"『EPS TOPIK』  27-30"}],
+        "title":[{"1":"Bimestre 1"}, {"2":"Bimestre 2"}, {"3":"Bimestre 3"}, {"4":"Bimestre 4"}, {"5":"Bimestre 5"}],
+        "subtitle":[{"1":"『EPS TOPIK』  8-12"}, {"2":"『EPS TOPIK』  13-17"}, {"3":"『EPS TOPIK』  18-21"}, {"4":"『EPS TOPIK』  22-26"}, {"5":"『EPS TOPIK』  27-30"}],
         "content":[
             {"1":"En este nivel se estudia la gramática y el vocabulario más básico guiado a las expresiones cotidianas. Aprenderán las herramientas para poder comprender la lengua oral y escrita de forma más sencilla. Aprenderán numerales: Fecha, hora y contéo."},
             {"2":"En este nivel aprenderán expresiones más prácticas: hacer citas, pedir comida en restaurantes, expresiones relacionadas con el clima, pasatiempos y viajes."},
@@ -28,8 +29,8 @@ const message = [
     },
     {
         "nivel":"NIVEL INTERMEDIO",
-        "title":[{"1":"Bimestre 1", "2":"Bimestre 2", "3":"Bimestre 3", "4":"Bimestre 4", "5":"Bimestre 5"}],
-        "subtitle":[{"1":"『『Seogang』 3A 1-8", "2":"『『Seogang』 3B 1-4"}, {"3":"『『Seogang』 3B 5-8"}, {"4":"『『Seogang』 4A 1-4"}, {"5":"『『Seogang』 4A 5-8"}],
+        "title":[{"1":"Bimestre 1"}, {"2":"Bimestre 2"}, {"3":"Bimestre 3"}, {"4":"Bimestre 4"}, {"5":"Bimestre 5"}],
+        "subtitle":[{"1":"『『Seogang』 3A 1-8"}, {"2":"『『Seogang』 3B 1-4"}, {"3":"『『Seogang』 3B 5-8"}, {"4":"『『Seogang』 4A 1-4"}, {"5":"『『Seogang』 4A 5-8"}],
         "content":[
             {"1":"El contenido varía dependiendo del nivel y necesidades de los estudiantes"},
             {"2":"El contenido varía dependiendo del nivel y necesidades de los estudiantes"},
@@ -40,8 +41,8 @@ const message = [
     },
     {
         "nivel":"NIVEL AVANZADO",
-        "title":[{"1":"Bimestre 1", "2":"Bimestre 2", "3":"Bimestre 3", "4":"Bimestre 4", "5":"Bimestre 5", "6":"Bimestre 6"}],
-        "subtitle":[{"1":"『『Seogang』 4B 1-4", "2":"『『Seogang』 4B 5-8"}, {"3":"『『Seogang』 5A 1-4"}, {"4":"『『Seogang』 5A 5-8"}, {"5":"『『Seogang』 5B 1-4"}, {"6":"『『Seogang』 5B 5-8"}],
+        "title":[{"1":"Bimestre 1"}, {"2":"Bimestre 2"}, {"3":"Bimestre 3"}, {"4":"Bimestre 4"}, {"5":"Bimestre 5"}, {"6":"Bimestre 6"}],
+        "subtitle":[{"1":"『『Seogang』 4B 1-4"}, {"2":"『『Seogang』 4B 5-8"}, {"3":"『『Seogang』 5A 1-4"}, {"4":"『『Seogang』 5A 5-8"}, {"5":"『『Seogang』 5B 1-4"}, {"6":"『『Seogang』 5B 5-8"}],
         "content":[
             {"1":"El contenido varía dependiendo de los estudiantes"},
             {"2":"El contenido varía dependiendo de los estudiantes"},
@@ -61,7 +62,154 @@ function Curso() {
     const closeModal = () => {
         setModalVisible(false)
     }
-    console.log(message)
+    // console.log(Object.keys(message[0]))    // ['nivel', 'title', 'subtitle', 'content']
+    // console.log(Object.entries(message[0])) // [['nivel', 'NIVEL INTRODUCTORIO'], ['title', Array(1)], ['subtitle', Array(1)], ['content', Array(1)]]
+    // for(var prop in message) {
+    //     console.log(message[prop].nivel)  // {nivel: 'NIVEL INTRODUCTORIO', title: Array(1), subtitle: Array(1), content: Array(1)}
+    // }
+    
+    var list = [];
+    const titleStyle = {
+        display: 'flex',
+        fontSize: '0.7rem',
+        marginBottom: 20
+    }
+    const titleContinueStyle = {
+        display: 'flex',
+        fontSize: '0.7rem',
+        marginBottom: 5
+    }
+    const subStyle = {
+        fontSize: '0.5rem'
+    }
+    // message.map(item => {
+    //     list.push(<div key={uuidv4} style={{display: 'flex'}}>
+    //         <div class="col-md-3">{item.nivel}</div>
+    //         <div class="col-md-9">
+    //             <div>{Object.values(item.title[0])[0]}</div>
+    //             <div>{Object.values(item.subtitle[0])[0]}</div>
+    //             <div>{Object.values(item.content[0])[0]}</div>
+    //         </div>
+    //     </div>)
+    // })
+
+    list.push(<div key={uuidv4} class="row" style={titleStyle}>
+        <div class="col-md-3">{message[0].nivel}</div>
+        <div class="col-md-3" style={subStyle}>
+            <div>{Object.values(message[0].title[0])[0]}</div>
+            <div>{Object.values(message[0].subtitle[0])[0]}</div>
+            <div>{Object.values(message[0].content[0])[0]}</div>
+        </div>
+    </div>)
+    list.push(<div key={uuidv4} class="row" style={titleContinueStyle}>
+        <div class="col-md-3">{message[1].nivel}</div>
+        <div class="col-md-3" style={subStyle}>
+            <div>{Object.values(message[1].title[0])[0]}</div>
+            <div>{Object.values(message[1].subtitle[0])[0]}</div>
+            <div>{Object.values(message[1].content[0])[0]}</div>
+        </div>
+        <div class="col-md-3" style={subStyle}>
+            <div>{Object.values(message[1].title[1])[0]}</div>
+            <div>{Object.values(message[1].subtitle[1])[0]}</div>
+            <div>{Object.values(message[1].content[1])[0]}</div>
+        </div>
+        <div class="col-md-3" style={subStyle}>
+            <div>{Object.values(message[1].title[2])[0]}</div>
+            <div>{Object.values(message[1].subtitle[2])[0]}</div>
+            <div>{Object.values(message[1].content[2])[0]}</div>
+        </div>
+    </div>)
+    list.push(<div key={uuidv4} class="row" style={titleStyle}>
+        <div class="col-md-3"></div>
+        <div class="col-md-3" style={subStyle}>
+            <div>{Object.values(message[1].title[3])[0]}</div>
+            <div>{Object.values(message[1].subtitle[3])[0]}</div>
+            <div>{Object.values(message[1].content[3])[0]}</div>
+        </div>
+        <div class="col-sm-3" style={subStyle}>
+            <div>{Object.values(message[1].title[4])[0]}</div>
+            <div>{Object.values(message[1].subtitle[4])[0]}</div>
+            <div>{Object.values(message[1].content[4])[0]}</div>
+        </div>
+        <div class="col-md-3" style={subStyle}>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>)
+    list.push(<div key={uuidv4} class="row" style={titleContinueStyle}>
+        <div class="col-md-3">{message[2].nivel}</div>
+        <div class="col-md-3" style={subStyle}>
+            <div>{Object.values(message[2].title[0])[0]}</div>
+            <div>{Object.values(message[2].subtitle[0])[0]}</div>
+            <div>{Object.values(message[2].content[0])[0]}</div>
+        </div>
+        <div class="col-md-3" style={subStyle}>
+            <div>{Object.values(message[2].title[1])[0]}</div>
+            <div>{Object.values(message[2].subtitle[1])[0]}</div>
+            <div>{Object.values(message[2].content[1])[0]}</div>
+        </div>
+        <div class="col-md-3" style={subStyle}>
+            <div>{Object.values(message[2].title[2])[0]}</div>
+            <div>{Object.values(message[2].subtitle[2])[0]}</div>
+            <div>{Object.values(message[2].content[2])[0]}</div>
+        </div>
+    </div>)
+    list.push(<div key={uuidv4} class="row" style={titleStyle}>
+        <div class="col-md-3"></div>
+        <div class="col-md-3" style={subStyle}>
+            <div>{Object.values(message[2].title[3])[0]}</div>
+            <div>{Object.values(message[2].subtitle[3])[0]}</div>
+            <div>{Object.values(message[2].content[3])[0]}</div>
+        </div>
+        <div class="col-md-3" style={subStyle}>
+            <div>{Object.values(message[2].title[4])[0]}</div>
+            <div>{Object.values(message[2].subtitle[4])[0]}</div>
+            <div>{Object.values(message[2].content[4])[0]}</div>
+        </div>
+        <div class="col-md-3" style={subStyle}>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>)
+    list.push(<div key={uuidv4} class="row" style={titleContinueStyle}>
+        <div class="col-md-3">{message[3].nivel}</div>
+        <div class="col-md-3" style={subStyle}>
+            <div>{Object.values(message[3].title[0])[0]}</div>
+            <div>{Object.values(message[3].subtitle[0])[0]}</div>
+            <div>{Object.values(message[3].content[0])[0]}</div>
+        </div>
+        <div class="col-md-3" style={subStyle}>
+            <div>{Object.values(message[3].title[1])[0]}</div>
+            <div>{Object.values(message[3].subtitle[1])[0]}</div>
+            <div>{Object.values(message[3].content[1])[0]}</div>
+        </div>
+        <div class="col-md-3" style={subStyle}>
+            <div>{Object.values(message[3].title[2])[0]}</div>
+            <div>{Object.values(message[3].subtitle[2])[0]}</div>
+            <div>{Object.values(message[3].content[2])[0]}</div>
+        </div>
+    </div>)
+    list.push(<div key={uuidv4} class="row" style={titleStyle}>
+        <div class="col-md-3"></div>
+        <div class="col-md-3" style={subStyle}>
+            <div>{Object.values(message[3].title[3])[0]}</div>
+            <div>{Object.values(message[3].subtitle[3])[0]}</div>
+            <div>{Object.values(message[3].content[3])[0]}</div>
+        </div>
+        <div class="col-md-3" style={subStyle}>
+            <div>{Object.values(message[3].title[4])[0]}</div>
+            <div>{Object.values(message[3].subtitle[4])[0]}</div>
+            <div>{Object.values(message[3].content[4])[0]}</div>
+        </div>
+        <div class="col-md-3" style={subStyle}>
+            <div>{Object.values(message[3].title[5])[0]}</div>
+            <div>{Object.values(message[3].subtitle[5])[0]}</div>
+            <div>{Object.values(message[3].content[5])[0]}</div>
+        </div>
+    </div>)
+
     return (
         <>
         <section class="page-section bg-light" id="portfolio">
@@ -76,7 +224,7 @@ function Curso() {
                             closable={true}
                             maskClosable={true}
                             onClose={closeModal}
-                            message={message}></Modal>
+                            message={message}>{list}</Modal>
                         }
                     </div>
                 </div>

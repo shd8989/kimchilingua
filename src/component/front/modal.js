@@ -94,8 +94,8 @@ const ModalInner = styled.div`
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
   background-color: #fff;
   border-radius: 10px;
-  min-width: 500px;
-  width: 500px;
+  min-width: 80%;
+  width: 90%;
   max-width: 700px;
   top: 50%;
   transform: translateY(-50%);
