@@ -12,8 +12,7 @@ function Top() {
                         <li class="nav-item"><a class="nav-link" href="#services">Inicio</a></li>
                         <li class="nav-item"><a class="nav-link" href="#portfolio">Curso</a></li>
                         <li class="nav-item"><a class="nav-link" href="#about">Calendario</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">+INFO</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/admin">Admin</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#faq">+INFO</a></li>
                     </ul>
                 </div>
             </div>

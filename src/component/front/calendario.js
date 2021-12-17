@@ -213,7 +213,7 @@ function Calendario() {
                     </ThemeProvider>
                 </ul>
                 
-                <div style={{display: 'flex', justifyContent:'center', marginTop: '50px'}}>
+                <div id="faq" style={{display: 'flex', justifyContent:'center', marginTop: '50px'}}>
                     <button class="btn btn-xl text-uppercase" style={{color:'#fff',backgroundColor:'#2e3383',border:'#2e3383'}} onClick={openModal}>PREGUNTAS FRECUENTES</button>
                     {
                         modalVisible && <Modal
