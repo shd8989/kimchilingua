@@ -1,6 +1,13 @@
+import React, { useState } from 'react';
 import ReactWhatsapp from 'react-whatsapp';
 
 function Contacto() {
+    const [value, setValue] = useState();
+
+    const handleChange = (event) => {
+        setValue(event.target.value);
+    };
+
     return (
         <>
         <section class="page-section" id="contact">
@@ -14,8 +21,7 @@ function Contacto() {
                         <div class="col-md-3"></div>
                         <div class="col-md-6">
                             <div class="form-group form-group-textarea mb-md-0">
-                                
-                                <textarea class="form-control" id="message" placeholder="Tu mensaje" data-sb-validations="required"></textarea>
+                                <textarea class="form-control" id="message" placeholder="Tu mensaje" data-sb-validations="required" value={value} onChange={handleChange}></textarea>
                                 <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                             </div>
                         </div>
@@ -34,7 +40,7 @@ function Contacto() {
                     <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                     
                     <div class="text-center">
-                        <ReactWhatsapp class="btn btn-primary btn-xl text-uppercase" number="82-10-1111-1111" message="La cuenta de Kimchilingua de Whatsapp">Enviar</ReactWhatsapp>
+                        <ReactWhatsapp class="btn btn-primary btn-xl text-uppercase" number="82-10-1111-1111" message={value}>Enviar</ReactWhatsapp>
                         </div>
                 </form>
             </div>
