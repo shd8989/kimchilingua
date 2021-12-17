@@ -77,7 +77,7 @@ function Curso() {
     const titleContinueStyle = {
         display: 'flex',
         fontSize: '0.7rem',
-        marginBottom: 5
+        marginBottom: 10
     }
     const subStyle = {
         fontSize: '0.5rem'
