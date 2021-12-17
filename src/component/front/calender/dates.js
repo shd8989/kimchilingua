@@ -3,18 +3,18 @@ import styled from 'styled-components';
 import Modal from './modal';
 
 const Dates = (props) => {
-  const { lastDate, firstDate, elm, findToday, month, year, idx, holiday } =
-    props;
+  const { lastDate, firstDate, elm, findToday, month, year, idx, holiday, evtData } = props;
 
   const [userInput, setUserInput] = useState({});
   const [evtList, setEvtList] = useState([]);
   const [openModal, setOpenModal] = useState(false);
-  let dateKey = `${month}` + `${elm}`;
+  let dateKey = `${year}` + `${month}` + `${elm}`;
   const registEvent = (value) => {
     setEvtList([...evtList, value]);
     setUserInput('');
     setOpenModal(false);
   };
+  // setEvtList([...evtData.evtList, ''])
 
   return (
     <>
@@ -59,9 +59,9 @@ const Dates = (props) => {
               })}
           </Holidays>
         )}
-        {Boolean(evtList[0]) && (
+        {Boolean(evtData) && (
           <Lists>
-            {evtList.map((list, index) => {
+            {evtData.map((list, index) => {
               return (
                 list.slice(0, list.indexOf('_')) === dateKey && (
                   <List
