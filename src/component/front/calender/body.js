@@ -18,10 +18,9 @@ const Body = (props) => {
   const runAxios = async () => {
     try {
       const res = await axios.get(
-        `http://localhost:8000/?solYear=${year}&solMonth=${month}`,
+        `http://localhost:3000/?solYear=${year}&solMonth=${month}`,
         requestOptions
       );
-      console.log(res.data);
       setHoliday(res.data);
     } catch (e) {
       console.log(e);
