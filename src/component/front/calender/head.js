@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 const Head = (props) => {
-  const { year, month, goToday, setMonth } = props;
+  const { year, month, goToday, setMonth, setYear } = props;
   return (
     <Form>
       <Nav>
@@ -13,11 +13,27 @@ const Head = (props) => {
         </div>
         <div class="col-md-3">
           <BtnBox>
-            <Btn onClick={() => setMonth(month - 1)}>&lt;</Btn>
+            <Btn onClick={() => {
+              if((month - 1 < 1)) {
+                setYear(year -1);
+                setMonth(12)
+              }
+              else {
+                setMonth(month - 1)
+              }
+            }}>&lt;</Btn>
             <Btn width="20px" onClick={() => goToday()}>
               Hoy
             </Btn>
-            <Btn onClick={() => setMonth(month + 1)}>&gt;</Btn>
+            <Btn onClick={() => {
+              if((month + 1 > 12)) {
+                setYear(year + 1);
+                setMonth((month + 1)%12)
+              }
+              else {
+                setMonth(month + 1)
+              }
+            }}>&gt;</Btn>
           </BtnBox>
         </div>
       </Nav>

@@ -56,13 +56,15 @@ const Calender = () => {
   const goToday = () => {
     let TODAY = new Date().getDate();
     let goMonth = new Date().getMonth() + 1;
+    let goYear = new Date().getFullYear();
+    setYear(goYear);
     setMonth(goMonth);
     setToday(TODAY);
   };
 
   return (
     <div>
-      <Head year={year} month={month} setMonth={setMonth} goToday={goToday} />
+      <Head year={year} month={month} setMonth={setMonth} setYear={setYear} goToday={goToday} />
       <Body totalDate={totalDate} today={today} month={month} year={year} />
     </div>
   );
