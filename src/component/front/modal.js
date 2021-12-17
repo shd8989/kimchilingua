@@ -44,7 +44,7 @@ useEffect(() => {
           visible={visible}
         >
           <ModalInner tabIndex={0} className="modal-inner">
-            {closable && <button className="modal-close" onClick={close} />}
+            {closable && <button className="modal-close" onClick={close}>X</button>}
             {children}
           </ModalInner>
         </ModalWrapper>
@@ -90,14 +90,15 @@ const ModalOverlay = styled.div`
 
 const ModalInner = styled.div`
   box-sizing: border-box;
-  position: relative;
+  position: absolute;
   box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
   background-color: #fff;
   border-radius: 10px;
   min-width: 80%;
   width: 90%;
   max-width: 700px;
-  top: 50%;
+  top: 70%;
+  left: 10%;
   transform: translateY(-50%);
   margin: 0 auto;
   padding: 40px 20px;
