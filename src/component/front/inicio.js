@@ -87,7 +87,7 @@ function Inicio() {
                     <div class="row">
                         <div class="col-md-4"><h5 class="my-3">Método de pago</h5></div>
                         <div class="col-md-8" style={{margin: '1rem 0', textAlign: 'left'}}>
-                            <div>Paypal (elena.h.lee@gmail,com)</div>
+                            <div>Paypal (elena.h.lee@gmail.com)</div>
                         </div>
                     </div>
                     <div class="row">
