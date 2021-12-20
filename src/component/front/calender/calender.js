@@ -13,12 +13,12 @@ const Calender = () => {
 
   const changeDate = (month) => {
     //이전 날짜
-    let PVLastDate = new Date(YEAR, month - 1, 0).getDate();
-    let PVLastDay = new Date(YEAR, month - 1, 0).getDay();
+    let PVLastDate = new Date((month - 1 === 1 ? year - 1 : year), (month - 1 === 1 ? 12 : month - 1), 0).getDate();
+    let PVLastDay = new Date((month - 1 === 1 ? year - 1 : year), (month - 1 === 1 ? 12 : month - 1), 0).getDay();
     //다음 날짜
-    const ThisLasyDay = new Date(YEAR, month, 0).getDay();
-    const ThisLasyDate = new Date(YEAR, month, 0).getDate();
-
+    const ThisLastDay = new Date((month === 12 ? year + 1 : year), (month === 12 ? 1 : month), 0).getDay();
+    const ThisLastDate = new Date((month === 12 ? year + 1 : year), (month === 12 ? 1 : month), 0).getDate();
+    
     //이전 날짜 만들기
     let PVLD = [];
     if (PVLastDay !== 6) {
@@ -28,7 +28,7 @@ const Calender = () => {
     }
     //다음 날짜 만들기
     let TLD = [];
-    for (let i = 1; i < 7 - ThisLasyDay; i++) {
+    for (let i = 1; i < 7 - ThisLastDay; i++) {
       if (i === 0) {
         return TLD;
       }
@@ -38,7 +38,7 @@ const Calender = () => {
     //현재날짜
     let TD = [];
 
-    TD = [...Array(ThisLasyDate + 1).keys()].slice(1);
+    TD = [...Array(ThisLastDate + 1).keys()].slice(1);
 
     return PVLD.concat(TD, TLD);
   };
