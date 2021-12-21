@@ -44,8 +44,8 @@ useEffect(() => {
           visible={visible}
         >
           <ModalInner tabIndex={0} className="modal-inner">
-            {closable && <button className="modal-close" onClick={close}>X</button>}
-            {children}
+              {closable && <div style={{display: 'flex', justifyContent: 'right', marginBottom: 15}}><button className="modal-close" onClick={close}>X</button></div>}
+              {children}
           </ModalInner>
         </ModalWrapper>
       </Portal>
