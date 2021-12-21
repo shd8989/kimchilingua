@@ -5,7 +5,7 @@ import introductorio from '../../assets/img/curso/Introductorio-1.jpg'
 import topik from '../../assets/img/curso/Topik-1.jpg'
 import {v4 as uuidv4} from 'uuid';
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Modal from './modal';
 
 const message = [
@@ -80,7 +80,12 @@ function Curso() {
         marginBottom: 10
     }
     const subStyle = {
-        fontSize: '0.5rem'
+        fontSize: '0.5rem',
+        border: 'solid 0.5px black',
+        padding: 0,
+        borderRadius: 10,
+        width: '20%',
+        marginRight: '10px'
     }
     // message.map(item => {
     //     list.push(<div key={uuidv4} style={{display: 'flex'}}>
@@ -94,122 +99,150 @@ function Curso() {
     // })
 
     list.push(<div key={uuidv4} class="row" style={titleStyle}>
-        <div class="col-md-3">{message[0].nivel}</div>
+        <div class="col-md-3" style={{color:'#036aa7', fontWeight: 'bold', fontSize: '1rem'}}>{message[0].nivel}</div>
         <div class="col-md-3" style={subStyle}>
-            <div>{Object.values(message[0].title[0])[0]}</div>
-            <div>{Object.values(message[0].subtitle[0])[0]}</div>
-            <div>{Object.values(message[0].content[0])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', fontWeight: 'bold', fontSize: '0.8rem', background: '#036aa7', borderRadius: '10px 10px 0 0'}}>{Object.values(message[0].title[0])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', background: '#036aa7', borderTop: 'solid 1px #036aa7'}}>{Object.values(message[0].subtitle[0])[0]}</div>
+            <div style={{borderTop: 'solid 0.5px #036aa7', padding: '5px 0px 15px 3px'}}>{Object.values(message[0].content[0])[0]}</div>
+            <div style={{minHeight:10, background: '#036aa7', borderRadius: '0 0 10px 10px'}}></div>
         </div>
     </div>)
     list.push(<div key={uuidv4} class="row" style={titleContinueStyle}>
-        <div class="col-md-3">{message[1].nivel}</div>
+        <div class="col-md-3" style={{color:'#2d4c8f', fontWeight: 'bold', fontSize: '1rem'}}>{message[1].nivel}</div>
         <div class="col-md-3" style={subStyle}>
-            <div>{Object.values(message[1].title[0])[0]}</div>
-            <div>{Object.values(message[1].subtitle[0])[0]}</div>
-            <div>{Object.values(message[1].content[0])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', fontWeight: 'bold', fontSize: '0.8rem', background: '#2d4c8f', borderRadius: '10px 10px 0 0'}}>{Object.values(message[1].title[0])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', background: '#2d4c8f', borderTop: 'solid 1px #2d4c8f'}}>{Object.values(message[1].subtitle[0])[0]}</div>
+            <div name="basico" style={{borderTop: 'solid 0.5px #2d4c8f', padding: '5px 0px 15px 3px'}}>{Object.values(message[1].content[0])[0]}</div>
+            <div style={{minHeight:10, background: '#2d4c8f', borderRadius: '0 0 10px 10px'}}></div>
         </div>
         <div class="col-md-3" style={subStyle}>
-            <div>{Object.values(message[1].title[1])[0]}</div>
-            <div>{Object.values(message[1].subtitle[1])[0]}</div>
-            <div>{Object.values(message[1].content[1])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', fontWeight: 'bold', fontSize: '0.8rem', background: '#2d4c8f', borderRadius: '10px 10px 0 0'}}>{Object.values(message[1].title[1])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', background: '#2d4c8f', borderTop: 'solid 1px #2d4c8f'}}>{Object.values(message[1].subtitle[1])[0]}</div>
+            <div name="basico" style={{borderTop: 'solid 0.5px #2d4c8f', padding: '5px 0px 15px 3px'}}>{Object.values(message[1].content[1])[0]}</div>
+            <div style={{minHeight:10, background: '#2d4c8f', borderRadius: '0 0 10px 10px'}}></div>
         </div>
         <div class="col-md-3" style={subStyle}>
-            <div>{Object.values(message[1].title[2])[0]}</div>
-            <div>{Object.values(message[1].subtitle[2])[0]}</div>
-            <div>{Object.values(message[1].content[2])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', fontWeight: 'bold', fontSize: '0.8rem', background: '#2d4c8f', borderRadius: '10px 10px 0 0'}}>{Object.values(message[1].title[2])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', background: '#2d4c8f', borderTop: 'solid 1px #2d4c8f'}}>{Object.values(message[1].subtitle[2])[0]}</div>
+            <div name="basico" style={{borderTop: 'solid 0.5px #2d4c8f', padding: '5px 0px 15px 3px'}}>{Object.values(message[1].content[2])[0]}</div>
+            <div style={{minHeight:10, background: '#2d4c8f', borderRadius: '0 0 10px 10px'}}></div>
         </div>
     </div>)
     list.push(<div key={uuidv4} class="row" style={titleStyle}>
         <div class="col-md-3"></div>
         <div class="col-md-3" style={subStyle}>
-            <div>{Object.values(message[1].title[3])[0]}</div>
-            <div>{Object.values(message[1].subtitle[3])[0]}</div>
-            <div>{Object.values(message[1].content[3])[0]}</div>
-        </div>
-        <div class="col-sm-3" style={subStyle}>
-            <div>{Object.values(message[1].title[4])[0]}</div>
-            <div>{Object.values(message[1].subtitle[4])[0]}</div>
-            <div>{Object.values(message[1].content[4])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', fontWeight: 'bold', fontSize: '0.8rem', background: '#2d4c8f', borderRadius: '10px 10px 0 0'}}>{Object.values(message[1].title[3])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', background: '#2d4c8f', borderTop: 'solid 1px #2d4c8f'}}>{Object.values(message[1].subtitle[3])[0]}</div>
+            <div style={{borderTop: 'solid 0.5px #2d4c8f', padding: '5px 0px 15px 3px'}}>{Object.values(message[1].content[3])[0]}</div>
+            <div style={{minHeight:10, background: '#2d4c8f', borderRadius: '0 0 10px 10px'}}></div>
         </div>
         <div class="col-md-3" style={subStyle}>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div style={{textAlign:'center', color: '#ffffff', fontWeight: 'bold', fontSize: '0.8rem', background: '#2d4c8f', borderRadius: '10px 10px 0 0'}}>{Object.values(message[1].title[4])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', background: '#2d4c8f', borderTop: 'solid 1px #2d4c8f'}}>{Object.values(message[1].subtitle[4])[0]}</div>
+            <div style={{borderTop: 'solid 0.5px #2d4c8f', padding: '5px 0px 15px 3px'}}>{Object.values(message[1].content[4])[0]}</div>
+            <div style={{minHeight:10, background: '#2d4c8f', borderRadius: '0 0 10px 10px'}}></div>
         </div>
-    </div>)
-    list.push(<div key={uuidv4} class="row" style={titleContinueStyle}>
-        <div class="col-md-3">{message[2].nivel}</div>
-        <div class="col-md-3" style={subStyle}>
-            <div>{Object.values(message[2].title[0])[0]}</div>
-            <div>{Object.values(message[2].subtitle[0])[0]}</div>
-            <div>{Object.values(message[2].content[0])[0]}</div>
-        </div>
-        <div class="col-md-3" style={subStyle}>
-            <div>{Object.values(message[2].title[1])[0]}</div>
-            <div>{Object.values(message[2].subtitle[1])[0]}</div>
-            <div>{Object.values(message[2].content[1])[0]}</div>
-        </div>
-        <div class="col-md-3" style={subStyle}>
-            <div>{Object.values(message[2].title[2])[0]}</div>
-            <div>{Object.values(message[2].subtitle[2])[0]}</div>
-            <div>{Object.values(message[2].content[2])[0]}</div>
-        </div>
-    </div>)
-    list.push(<div key={uuidv4} class="row" style={titleStyle}>
-        <div class="col-md-3"></div>
-        <div class="col-md-3" style={subStyle}>
-            <div>{Object.values(message[2].title[3])[0]}</div>
-            <div>{Object.values(message[2].subtitle[3])[0]}</div>
-            <div>{Object.values(message[2].content[3])[0]}</div>
-        </div>
-        <div class="col-md-3" style={subStyle}>
-            <div>{Object.values(message[2].title[4])[0]}</div>
-            <div>{Object.values(message[2].subtitle[4])[0]}</div>
-            <div>{Object.values(message[2].content[4])[0]}</div>
-        </div>
-        <div class="col-md-3" style={subStyle}>
+        <div class="col-md-3">
             <div></div>
             <div></div>
             <div></div>
         </div>
     </div>)
     list.push(<div key={uuidv4} class="row" style={titleContinueStyle}>
-        <div class="col-md-3">{message[3].nivel}</div>
+        <div class="col-md-3" style={{color:'#233274', fontWeight: 'bold', fontSize: '1rem'}}>{message[2].nivel}</div>
         <div class="col-md-3" style={subStyle}>
-            <div>{Object.values(message[3].title[0])[0]}</div>
-            <div>{Object.values(message[3].subtitle[0])[0]}</div>
-            <div>{Object.values(message[3].content[0])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', fontWeight: 'bold', fontSize: '0.8rem', background: '#233274', borderRadius: '10px 10px 0 0'}}>{Object.values(message[2].title[0])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', background: '#233274', borderTop: 'solid 1px #233274'}}>{Object.values(message[2].subtitle[0])[0]}</div>
+            <div name="inter" style={{borderTop: 'solid 0.5px #233274', padding: '5px 0px 15px 3px'}}>{Object.values(message[2].content[0])[0]}</div>
+            <div style={{minHeight:10, background: '#233274', borderRadius: '0 0 10px 10px'}}></div>
         </div>
         <div class="col-md-3" style={subStyle}>
-            <div>{Object.values(message[3].title[1])[0]}</div>
-            <div>{Object.values(message[3].subtitle[1])[0]}</div>
-            <div>{Object.values(message[3].content[1])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', fontWeight: 'bold', fontSize: '0.8rem', background: '#233274', borderRadius: '10px 10px 0 0'}}>{Object.values(message[2].title[1])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', background: '#233274', borderTop: 'solid 1px #233274'}}>{Object.values(message[2].subtitle[1])[0]}</div>
+            <div name="inter" style={{borderTop: 'solid 0.5px #233274', padding: '5px 0px 15px 3px'}}>{Object.values(message[2].content[1])[0]}</div>
+            <div style={{minHeight:10, background: '#233274', borderRadius: '0 0 10px 10px'}}></div>
         </div>
         <div class="col-md-3" style={subStyle}>
-            <div>{Object.values(message[3].title[2])[0]}</div>
-            <div>{Object.values(message[3].subtitle[2])[0]}</div>
-            <div>{Object.values(message[3].content[2])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', fontWeight: 'bold', fontSize: '0.8rem', background: '#233274', borderRadius: '10px 10px 0 0'}}>{Object.values(message[2].title[2])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', background: '#233274', borderTop: 'solid 1px #233274'}}>{Object.values(message[2].subtitle[2])[0]}</div>
+            <div name="inter" style={{borderTop: 'solid 0.5px #233274', padding: '5px 0px 15px 3px'}}>{Object.values(message[2].content[2])[0]}</div>
+            <div style={{minHeight:10, background: '#233274', borderRadius: '0 0 10px 10px'}}></div>
         </div>
     </div>)
     list.push(<div key={uuidv4} class="row" style={titleStyle}>
         <div class="col-md-3"></div>
         <div class="col-md-3" style={subStyle}>
-            <div>{Object.values(message[3].title[3])[0]}</div>
-            <div>{Object.values(message[3].subtitle[3])[0]}</div>
-            <div>{Object.values(message[3].content[3])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', fontWeight: 'bold', fontSize: '0.8rem', background: '#233274', borderRadius: '10px 10px 0 0'}}>{Object.values(message[2].title[3])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', background: '#233274', borderTop: 'solid 1px #233274'}}>{Object.values(message[2].subtitle[3])[0]}</div>
+            <div style={{borderTop: 'solid 0.5px #233274', padding: '5px 0px 15px 3px'}}>{Object.values(message[2].content[3])[0]}</div>
+            <div style={{minHeight:10, background: '#233274', borderRadius: '0 0 10px 10px'}}></div>
         </div>
         <div class="col-md-3" style={subStyle}>
-            <div>{Object.values(message[3].title[4])[0]}</div>
-            <div>{Object.values(message[3].subtitle[4])[0]}</div>
-            <div>{Object.values(message[3].content[4])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', fontWeight: 'bold', fontSize: '0.8rem', background: '#233274', borderRadius: '10px 10px 0 0'}}>{Object.values(message[2].title[4])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', background: '#233274', borderTop: 'solid 1px #233274'}}>{Object.values(message[2].subtitle[4])[0]}</div>
+            <div style={{borderTop: 'solid 0.5px #233274', padding: '5px 0px 15px 3px'}}>{Object.values(message[2].content[4])[0]}</div>
+            <div style={{minHeight:10, background: '#233274', borderRadius: '0 0 10px 10px'}}></div>
+        </div>
+        <div class="col-md-3">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>)
+    list.push(<div key={uuidv4} class="row" style={titleContinueStyle}>
+        <div class="col-md-3" style={{color:'#111b49', fontWeight: 'bold', fontSize: '1rem'}}>{message[3].nivel}</div>
+        <div class="col-md-3" style={subStyle}>
+            <div style={{textAlign:'center', color: '#ffffff', fontWeight: 'bold', fontSize: '0.8rem', background: '#111b49', borderRadius: '10px 10px 0 0'}}>{Object.values(message[3].title[0])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', background: '#111b49', borderTop: 'solid 1px #111b49'}}>{Object.values(message[3].subtitle[0])[0]}</div>
+            <div style={{borderTop: 'solid 0.5px #111b49', padding: '5px 0px 15px 3px'}}>{Object.values(message[3].content[0])[0]}</div>
+            <div style={{minHeight:10, background: '#111b49', borderRadius: '0 0 10px 10px'}}></div>
         </div>
         <div class="col-md-3" style={subStyle}>
-            <div>{Object.values(message[3].title[5])[0]}</div>
-            <div>{Object.values(message[3].subtitle[5])[0]}</div>
-            <div>{Object.values(message[3].content[5])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', fontWeight: 'bold', fontSize: '0.8rem', background: '#111b49', borderRadius: '10px 10px 0 0'}}>{Object.values(message[3].title[1])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', background: '#111b49', borderTop: 'solid 1px #111b49'}}>{Object.values(message[3].subtitle[1])[0]}</div>
+            <div style={{borderTop: 'solid 0.5px #111b49', padding: '5px 0px 15px 3px'}}>{Object.values(message[3].content[1])[0]}</div>
+            <div style={{minHeight:10, background: '#111b49', borderRadius: '0 0 10px 10px'}}></div>
+        </div><div class="col-md-3" style={subStyle}>
+            <div style={{textAlign:'center', color: '#ffffff', fontWeight: 'bold', fontSize: '0.8rem', background: '#111b49', borderRadius: '10px 10px 0 0'}}>{Object.values(message[3].title[2])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', background: '#111b49', borderTop: 'solid 1px #111b49'}}>{Object.values(message[3].subtitle[2])[0]}</div>
+            <div style={{borderTop: 'solid 0.5px #111b49', padding: '5px 0px 15px 3px'}}>{Object.values(message[3].content[2])[0]}</div>
+            <div style={{minHeight:10, background: '#111b49', borderRadius: '0 0 10px 10px'}}></div>
+        </div>
+    </div>)
+    list.push(<div key={uuidv4} class="row" style={titleStyle}>
+        <div class="col-md-3"></div>
+        <div class="col-md-3" style={subStyle}>
+            <div style={{textAlign:'center', color: '#ffffff', fontWeight: 'bold', fontSize: '0.8rem', background: '#111b49', borderRadius: '10px 10px 0 0'}}>{Object.values(message[3].title[3])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', background: '#111b49', borderTop: 'solid 1px #111b49'}}>{Object.values(message[3].subtitle[3])[0]}</div>
+            <div style={{borderTop: 'solid 0.5px #111b49', padding: '5px 0px 15px 3px'}}>{Object.values(message[3].content[3])[0]}</div>
+            <div style={{minHeight:10, background: '#111b49', borderRadius: '0 0 10px 10px'}}></div>
+        </div><div class="col-md-3" style={subStyle}>
+            <div style={{textAlign:'center', color: '#ffffff', fontWeight: 'bold', fontSize: '0.8rem', background: '#111b49', borderRadius: '10px 10px 0 0'}}>{Object.values(message[3].title[4])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', background: '#111b49', borderTop: 'solid 1px #111b49'}}>{Object.values(message[3].subtitle[4])[0]}</div>
+            <div style={{borderTop: 'solid 0.5px #111b49', padding: '5px 0px 15px 3px'}}>{Object.values(message[3].content[4])[0]}</div>
+            <div style={{minHeight:10, background: '#111b49', borderRadius: '0 0 10px 10px'}}></div>
+        </div><div class="col-md-3" style={subStyle}>
+            <div style={{textAlign:'center', color: '#ffffff', fontWeight: 'bold', fontSize: '0.8rem', background: '#111b49', borderRadius: '10px 10px 0 0'}}>{Object.values(message[3].title[5])[0]}</div>
+            <div style={{textAlign:'center', color: '#ffffff', background: '#111b49', borderTop: 'solid 1px #111b49'}}>{Object.values(message[3].subtitle[5])[0]}</div>
+            <div style={{borderTop: 'solid 0.5px #111b49', padding: '5px 0px 15px 3px'}}>{Object.values(message[3].content[5])[0]}</div>
+            <div style={{minHeight:10, background: '#111b49', borderRadius: '0 0 10px 10px'}}></div>
         </div>
     </div>)
 
+    useEffect(() => {
+        var basicoArr = document.getElementsByName('basico');
+        var interArr = document.getElementsByName('inter');
+        if(modalVisible) {
+            var basicoHeight = basicoArr[0].offsetHeight + "px"
+            document.getElementsByName('basico')[1].style.height = basicoHeight;
+            document.getElementsByName('basico')[2].style.height = basicoHeight;
+
+            var interHeight = interArr[2].offsetHeight + "px"
+            document.getElementsByName('inter')[0].style.height = interHeight;
+            document.getElementsByName('inter')[1].style.height = interHeight;
+        }
+    }, );
+    
     return (
         <>
         <section class="page-section bg-light" id="portfolio">
