@@ -61,141 +61,153 @@ function Calendario() {
         setModalVisible(false)
     }
     var list = [];
-    const titleStyle = {
+    const leftStyle = {
         display: 'flex',
-        fontSize: '0.7rem',
         marginBottom: 5
     }
     const titleContinueStyle = {
         display: 'flex',
-        fontSize: '0.7rem',
         marginBottom: 20
     }
-    const subStyle = {
-        fontSize: '0.5rem'
+    const titleStyle = {
+        fontSize: '1rem',
+        display: 'flex'
+    }
+    const answerStyle = {
+        fontSize: '0.8rem'
     }
 
-    list.push(<div key={uuidv4} class="row" style={titleStyle}>
+    list.push(<div key={uuidv4} class="row" style={leftStyle}>
         <div class="col-md-3"></div>
-        <div class="col-md-9" style={subStyle}>
-            {message[0].question}
+        <div class="col-md-9" style={titleStyle}>
+            <div style={{background: '#263776', color: '#ffffff', padding: '5px 20px 5px 40px', marginLeft: -30}}>{message[0].question}</div>
+            <div></div>
         </div>
     </div>)
     list.push(<div key={uuidv4} class="row" style={titleContinueStyle}>
         <div class="col-md-3"></div>
-        <div class="col-md-9" style={subStyle}>
+        <div class="col-md-9" style={answerStyle}>
             {message[0].answer}
         </div>
     </div>)
-    list.push(<div key={uuidv4} class="row" style={titleStyle}>
+    list.push(<div key={uuidv4} class="row" style={leftStyle}>
         <div class="col-md-3"></div>
-        <div class="col-md-9" style={subStyle}>
-            {message[1].question}
+        <div class="col-md-9" style={titleStyle}>
+            <div style={{background: '#de842d', color: '#ffffff', padding: '5px 20px 5px 40px', marginLeft: -30}}>{message[1].question}</div>
+            <div></div>
         </div>
     </div>)
     list.push(<div key={uuidv4} class="row" style={titleContinueStyle}>
         <div class="col-md-3"></div>
-        <div class="col-md-9" style={subStyle}>
+        <div class="col-md-9" style={answerStyle}>
             {message[1].answer}
         </div>
     </div>)
-    list.push(<div key={uuidv4} class="row" style={titleStyle}>
+    list.push(<div key={uuidv4} class="row" style={leftStyle}>
         <div class="col-md-3"></div>
-        <div class="col-md-9" style={subStyle}>
-            {message[2].question}
+        <div class="col-md-9" style={titleStyle}>
+            <div style={{background: '#dc3e3b', color: '#ffffff', padding: '5px 20px 5px 40px', marginLeft: -30}}>{message[2].question}</div>
+            <div></div>
         </div>
     </div>)
     list.push(<div key={uuidv4} class="row" style={titleContinueStyle}>
         <div class="col-md-3"></div>
-        <div class="col-md-9" style={subStyle}>
+        <div class="col-md-9" style={answerStyle}>
             {message[2].answer}
         </div>
     </div>)
-    list.push(<div key={uuidv4} class="row" style={titleStyle}>
+    list.push(<div key={uuidv4} class="row" style={leftStyle}>
         <div class="col-md-3"></div>
-        <div class="col-md-9" style={subStyle}>
-            {message[3].question}
+        <div class="col-md-9" style={titleStyle}>
+            <div style={{background: '#263776', color: '#ffffff', padding: '5px 20px 5px 40px', marginLeft: -30}}>{message[3].question}</div>
+            <div></div>
         </div>
     </div>)
     list.push(<div key={uuidv4} class="row" style={titleContinueStyle}>
         <div class="col-md-3"></div>
-        <div class="col-md-9" style={subStyle}>
+        <div class="col-md-9" style={answerStyle}>
             {message[3].answer}
         </div>
     </div>)
     
-    list.push(<div key={uuidv4} class="row" style={titleStyle}>
+    list.push(<div key={uuidv4} class="row" style={leftStyle}>
         <div class="col-md-3"></div>
-        <div class="col-md-9" style={subStyle}>
-            {message[4].question}
+        <div class="col-md-9" style={titleStyle}>
+            <div style={{background: '#de842d', color: '#ffffff', padding: '5px 20px 5px 40px', marginLeft: -30}}>{message[4].question}</div>
+            <div></div>
         </div>
     </div>)
     list.push(<div key={uuidv4} class="row" style={titleContinueStyle}>
         <div class="col-md-3"></div>
-        <div class="col-md-9" style={subStyle}>
+        <div class="col-md-9" style={answerStyle}>
             {message[4].answer}
         </div>
     </div>)
-    list.push(<div key={uuidv4} class="row" style={titleStyle}>
+    list.push(<div key={uuidv4} class="row" style={leftStyle}>
         <div class="col-md-3"></div>
-        <div class="col-md-9" style={subStyle}>
-            {message[5].question}
+        <div class="col-md-9" style={titleStyle}>
+            <div style={{background: '#dc3e3b', color: '#ffffff', padding: '5px 20px 5px 40px', marginLeft: -30}}>{message[5].question}</div>
+            <div></div>
         </div>
     </div>)
     list.push(<div key={uuidv4} class="row" style={titleContinueStyle}>
         <div class="col-md-3"></div>
-        <div class="col-md-9" style={subStyle}>
+        <div class="col-md-9" style={answerStyle}>
             {message[5].answer}
         </div>
     </div>)
-    list.push(<div key={uuidv4} class="row" style={titleStyle}>
+    list.push(<div key={uuidv4} class="row" style={leftStyle}>
         <div class="col-md-3"></div>
-        <div class="col-md-9" style={subStyle}>
-            {message[6].question}
+        <div class="col-md-9" style={titleStyle}>
+            <div style={{background: '#263776', color: '#ffffff', padding: '5px 20px 5px 40px', marginLeft: -30}}>{message[6].question}</div>
+            <div></div>
         </div>
     </div>)
     list.push(<div key={uuidv4} class="row" style={titleContinueStyle}>
         <div class="col-md-3"></div>
-        <div class="col-md-9" style={subStyle}>
+        <div class="col-md-9" style={answerStyle}>
             <div>- {Object.values(message[6].infor[0])}</div>
             <div>- {Object.values(message[6].infor[1])}</div>
             <div>- {Object.values(message[6].infor[2])}</div>
             <div>- {Object.values(message[6].infor[3])}</div>
         </div>
     </div>)
-    list.push(<div key={uuidv4} class="row" style={titleStyle}>
+    list.push(<div key={uuidv4} class="row" style={leftStyle}>
         <div class="col-md-3"></div>
-        <div class="col-md-9" style={subStyle}>
-            {message[7].question}
+        <div class="col-md-9" style={titleStyle}>
+            <div style={{background: '#de842d', color: '#ffffff', padding: '5px 20px 5px 40px', marginLeft: -30}}>{message[7].question}</div>
+            <div></div>
         </div>
     </div>)
     list.push(<div key={uuidv4} class="row" style={titleContinueStyle}>
         <div class="col-md-3"></div>
-        <div class="col-md-9" style={subStyle}>
+        <div class="col-md-9" style={answerStyle}>
             {message[7].answer}
         </div>
     </div>)
-    list.push(<div key={uuidv4} class="row" style={titleStyle}>
+    list.push(<div key={uuidv4} class="row" style={leftStyle}>
         <div class="col-md-3"></div>
-        <div class="col-md-9" style={subStyle}>
-            {message[8].question}
+        <div class="col-md-9" style={titleStyle}>
+            <div style={{background: '#dc3e3b', color: '#ffffff', padding: '5px 20px 5px 40px', marginLeft: -30}}>{message[8].question}</div>
+            <div></div>
         </div>
     </div>)
     list.push(<div key={uuidv4} class="row" style={titleContinueStyle}>
         <div class="col-md-3"></div>
-        <div class="col-md-9" style={subStyle}>
+        <div class="col-md-9" style={titleStyle}>
             {message[8].answer}
         </div>
     </div>)
-    list.push(<div key={uuidv4} class="row" style={titleStyle}>
+    list.push(<div key={uuidv4} class="row" style={leftStyle}>
         <div class="col-md-3"></div>
-        <div class="col-md-9" style={subStyle}>
-            {message[9].question}
+        <div class="col-md-9" style={titleStyle}>
+            <div style={{background: '#263776', color: '#ffffff', padding: '5px 20px 5px 40px', marginLeft: -30}}>{message[9].question}</div>
+            <div></div>
         </div>
     </div>)
     list.push(<div key={uuidv4} class="row" style={titleContinueStyle}>
         <div class="col-md-3"></div>
-        <div class="col-md-9" style={subStyle}>
+        <div class="col-md-9" style={titleStyle}>
             {message[9].answer}
         </div>
     </div>)
